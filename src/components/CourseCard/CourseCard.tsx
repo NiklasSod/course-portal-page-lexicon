@@ -1,5 +1,6 @@
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useState } from 'react'
+import CardModal from '../CardModal'
 
 export interface CourseCardProps {
   title: string;
@@ -9,6 +10,7 @@ export interface CourseCardProps {
 
 function CourseCard({title, category, description}: CourseCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div>
@@ -19,7 +21,9 @@ function CourseCard({title, category, description}: CourseCardProps) {
           text={"Läs mer"} 
           onClick={() => setIsOpen(true)} />
       </div>
-      {/* MODAL HERE */}
+      {isOpen && 
+        <CardModal 
+          title={title} category={category} description={description} setIsOpen={setIsOpen} />}
     </>
   );
 }
