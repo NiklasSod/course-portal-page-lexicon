@@ -11,9 +11,11 @@ function App() {
       <Header />
       <main>
         <InfoSection />
-        <CourseCards />
-        <CourseView />
-        <ContactForm />
+        <div className="p-12 pb-28">
+          <CourseCards />
+          <CourseView />
+          <ContactForm />
+        </div>
       </main>
       <Footer />
     </>

@@ -31,11 +31,11 @@ function CourseCards() {
   return (
     <section id="courses">
       { loading ? ( 
-        <div className="max-w-7xl mx-auto px-4 py-10 min-h-100">
+        <div className="max-w-7xl mx-auto pb-6 min-h-100">
           <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>
         </div> 
       ) : (
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="max-w-7xl mx-auto pb-6">
           <h2 className="text-[28px] font-bold mb-6">Populära kurser</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course, index) => (
