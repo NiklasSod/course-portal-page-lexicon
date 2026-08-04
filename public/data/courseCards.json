@@ -1,32 +1,27 @@
-{
-  "1": {
+[
+  {
     "title": "Webbutveckling från grunden",
-    "link": "/link1",
     "category": "</>",
     "description": "Lär dig att bygga moderna webbplatser från scratch. Vi går igenom grunderna i HTML, CSS och JavaScript samt hur du strukturerar dina projekt för webben."
   },
-  "2": {
+  {
     "title": "C# och ASP.NET Core",
-    "link": "/link-2",
     "category": "<C#>",
     "description": "Fördjupa dig i objektorienterad programmering och backend-utveckling med C#. Skapa kraftfulla API:er och skalbara webbapplikationer med ASP.NET Core."
   },
-  "3": {
+  {
     "title": "Responsiv design med CSS",
-    "link": "/link-3",
     "category": "<CSS>",
     "description": "Skapa webbplatser som ser fantastiska ut på alla skärmstorlekar. Lär dig hantera Flexbox, CSS Grid, media queries och moderna layouttekniker."
   },
-  "4": {
+  {
     "title": "JavaScript för webb",
-    "link": "/link-4",
     "category": "<JS>",
     "description": "Gör dina webbsidor interaktiva och dynamiska. Bli bekväm med DOM-manipulering, händelsehantering, async/await samt hantering av API-anrop."
   },
-  "5": {
+  {
     "title": "Nyheter, ny kurs om tillgänglighet",
-    "link": "/link-5",
     "category": "</>",
     "description": "Vi lanserar en ny kurs i tillgänglighet (WCAG)! Lär dig hur du skapar digitala produkter och gränssnitt som fungerar för alla användare oavsett funktionsvariationer."
   }
-}
+]

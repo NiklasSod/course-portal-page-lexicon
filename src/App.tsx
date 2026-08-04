@@ -1,9 +1,9 @@
-import Header from "./components/Header/Header";
-import InfoSection from "./components/InfoSection/InfoSection";
-import Footer from "./components/Footer/Footer";
-import ContactForm from "./components/ContactForm/ContactForm";
-import CourseCards from "./components/CourseCards/CourseCards";
-import CourseView from "./components/CourseView/CourseView";
+import Header from "./components/Header";
+import InfoSection from "./components/InfoSection";
+import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
+import CourseCards from "./components/CourseCards";
+import CourseView from "./components/CourseView";
 
 function App() {
   return (
