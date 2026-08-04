@@ -31,7 +31,9 @@ function CourseCards() {
   return (
     <div  id="courses">
       { loading ? ( 
-        <p>Laddar kurser...</p> 
+        <div className="max-w-7xl mx-auto px-4 py-10 min-h-100">
+          <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>
+        </div> 
       ) : (
         <section className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-[28px] font-bold mb-6">Populära kurser</h2>
