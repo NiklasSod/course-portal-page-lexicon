@@ -19,22 +19,22 @@ export function FormModal({ name, email, message, setIsOpen }: FormModalProps) {
       >
         <div className="flex items-center justify-between pb-3">
           <div>
-            <span className="text-md font-semibold px-2 py-1 bg-gray-100 rounded text-gray-700">
-              Namn: {name}
+            <span className="text-md rounded ">
+              <span className="font-semibold">Namn: </span>{name}
             </span>
-            <h2 className="text-md font-bold text-gray-900 mt-2">Email: {email}</h2>
+            <h2 className="text-md fontmt-2"><span className="font-semibold">Email: </span>{email}</h2>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="text-gray-400 hover:text-gray-600 font-bold text-xl px-2"
+            className="text-gray-400 hover:text-gray-600 font-bold text-xl px-2 cursor-pointer"
             aria-label="Stäng"
           >
             ✕
           </button>
         </div>
 
-        <div className="py-4 text-gray-800 leading-relaxed">
-          Meddelande: {message}
+        <div className="leading-relaxed">
+          <span className="text-md font-semibold rounded">Meddelande: </span>{message}
         </div>
 
         <div className="flex justify-end pt-3">

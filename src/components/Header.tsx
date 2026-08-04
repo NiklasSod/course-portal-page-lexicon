@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="py-4 px-6 md:py-6 md:px-12 bg-white border-b border-stone-200">
       <div className="flex justify-between items-center">
-        <span className="text-neutral-900 font-bold text-2xl">Kursportalen</span>
+        <span className="font-bold text-2xl">Kursportalen</span>
 
         {/* Hamburgermeny */}
         <button
@@ -22,18 +22,18 @@ function Header() {
 
         {/* Desktopmeny */}
         <nav className="hidden md:flex gap-8">
-          <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Startsida</a>
-          <a onClick={() => scrollToElement("courses")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kurser</a>
-          <a onClick={() => scrollToElement("contact-form")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
+          <a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a>
+          <a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a>
+          <a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
         </nav>
       </div>
 
       {/* Mobilmeny */}
       {menuOpen && (
         <nav className="md:hidden flex flex-col gap-4 pt-4 pb-2">
-          <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Startsida</a>
-          <a onClick={() => scrollToElement("courses")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kurser</a>
-          <a onClick={() => scrollToElement("contact-form")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
+          <a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a>
+          <a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a>
+          <a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
         </nav>
       )}
     </header>

@@ -3,6 +3,15 @@
 
 @theme {
     --font-sans: "Roboto", sans-serif;
+    --color-body: #1E1E1E;
+    --color-menu: #444444;
+    --color-subheading: #555555;
+    --color-btn-dark: #2C2C2C;
+    --color-footer-text: #666666;
+}
+
+body {
+    color: var(--color-body);
 }
 
 @layer base {
