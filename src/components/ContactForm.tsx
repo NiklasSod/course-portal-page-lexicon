@@ -48,18 +48,30 @@ function ContactForm() {
                     <input
                         type="email"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="bg-gray-100 border border-gray-300 rounded-xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-stone-400"
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                            if (errors.email) setErrors((prev) => ({ ...prev, email: "" }));
+                        }}
+                        className={`bg-gray-100 border rounded-xl px-4 py-2.5 outline-none focus:ring-2 ${
+                            errors.email ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-stone-400"
+                        }`}
                     />
+                    {errors.email && <span className="text-red-500 text-xs mt-0.5">{errors.email}</span>}
                 </label>
                 <label className="flex flex-col gap-1 text-sm font-medium ">
                     Meddelande
                     <textarea
                         value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        onChange={(e) => {
+                            setMessage(e.target.value);
+                            if (errors.message) setErrors((prev) => ({ ...prev, message: "" }));
+                        }}
                         rows={5}
-                        className="bg-gray-100 border border-gray-300 rounded-xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-stone-400 resize-none"
+                        className={`bg-gray-100 border rounded-xl px-4 py-2.5 outline-none focus:ring-2 resize-none ${
+                            errors.message ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-stone-400"
+                        }`}
                     />
+                    {errors.message && <span className="text-red-500 text-xs mt-0.5">{errors.message}</span>}
                 </label>
                 <div className="flex justify-center">
                     <PrimaryButton text="Skicka meddelande" dark={true} />
