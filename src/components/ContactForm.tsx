@@ -8,9 +8,8 @@ function ContactForm() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Namn:", name);
-        console.log("E-post:", email);
-        console.log("Meddelande:", message);
+        alert(`Namn: ${name}, email: ${email}, meddelande: ${message}. Är nu mottaget, tack!`);
+        // TODO update to modal
     };
     return(
         <form id="contact-form" onSubmit={handleSubmit} className="flex flex-col gap-5 w-full max-w-lg mx-auto px-6 py-10">
