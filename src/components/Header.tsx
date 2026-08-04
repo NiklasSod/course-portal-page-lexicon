@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { scrollToElement } from '../../utils/scroll'
+import { scrollToElement } from '../utils/scroll'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

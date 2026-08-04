@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CourseCard, { CourseCardProps } from "../CourseCard/CourseCard";
+import CourseCard, { CourseCardProps } from "./CourseCard";
 
 function CourseCards() {
   const [courses, setCourses] = useState<CourseCardProps[]>([]);

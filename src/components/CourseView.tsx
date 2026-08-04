@@ -1,4 +1,4 @@
-import PrimaryButton from "../Buttons/PrimaryButton";
+import PrimaryButton from "./PrimaryButton";
 
 function CourseView() {
   return (

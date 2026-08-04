@@ -1,5 +1,5 @@
 
-import PrimaryButton from "./Buttons/PrimaryButton";
+import PrimaryButton from "./PrimaryButton";
 
 interface CardModalProps {
   title: string;

@@ -1,6 +1,6 @@
-import PrimaryButton from "../Buttons/PrimaryButton";
+import PrimaryButton from "./PrimaryButton";
 import { useState } from 'react'
-import CardModal from '../CardModal'
+import CardModal from './CardModal'
 
 export interface CourseCardProps {
   title: string;

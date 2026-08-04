@@ -1,5 +1,5 @@
-import PrimaryButton from '../Buttons/PrimaryButton'
-import { scrollToElement } from '../../utils/scroll'
+import PrimaryButton from './PrimaryButton'
+import { scrollToElement } from '../utils/scroll'
 
 function InfoSection() {
 
