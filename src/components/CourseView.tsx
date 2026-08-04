@@ -3,7 +3,7 @@ import PrimaryButton from "./PrimaryButton";
 function CourseView() {
   return (
     <div className="w-full bg-white px-6 py-10 flex flex-col items-start">
-      <h1 className="text-3xl font-bold mb-8 text-stone-800">Kursvy</h1>
+      <h2 className="text-[28px] font-bold mb-8 text-stone-800">Kursvy</h2>
 
       <div className="bg-stone-50 rounded-2xl border border-stone-300 p-8 max-w-8xl w-full">
         <h2 className="text-2xl font-semibold mb-2">Webbutveckling från grunden</h2>

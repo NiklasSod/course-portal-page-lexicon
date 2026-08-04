@@ -15,7 +15,7 @@ function ContactForm() {
     return(
         <>
             <form id="contact-form" onSubmit={handleSubmit} className="flex flex-col gap-5 w-full max-w-lg mx-auto px-6 py-10">
-                <h2 className="text-2xl font-bold text-stone-800 text-center">Kontakt</h2>
+                <h2 className="text-[28px] font-bold text-stone-800 text-center">Kontakt</h2>
                 <label className="flex flex-col gap-1 text-sm font-medium text-black">
                     Namn
                     <input
