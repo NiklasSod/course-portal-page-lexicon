@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { scrollToElement } from '../../utils/scroll'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,8 +23,8 @@ function Header() {
         {/* Desktopmeny */}
         <nav className="hidden md:flex gap-8">
           <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Startsida</a>
-          <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kurser</a>
-          <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
+          <a href="#" onClick={() => scrollToElement("courses")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kurser</a>
+          <a href="#" onClick={() => scrollToElement("contact-form")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
         </nav>
       </div>
 
@@ -31,8 +32,8 @@ function Header() {
       {menuOpen && (
         <nav className="md:hidden flex flex-col gap-4 pt-4 pb-2">
           <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Startsida</a>
-          <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kurser</a>
-          <a href="/" className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
+          <a href="#" onClick={() => scrollToElement("courses")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kurser</a>
+          <a href="#" onClick={() => scrollToElement("contact-form")} className="text-neutral-600 no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
         </nav>
       )}
     </header>

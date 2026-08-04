@@ -3,7 +3,7 @@ import courseJson from "../../data/courseCards.json";
 
 function CourseCards() {
   return (
-    <section>
+    <section id="courses">
       <h2>Populära kurser</h2>
       <div>
         {Object.entries(courseJson).map((data) => (
