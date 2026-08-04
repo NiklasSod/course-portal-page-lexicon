@@ -2,7 +2,7 @@ import PrimaryButton from "./PrimaryButton";
 
 function CourseView() {
   return (
-    <div className="w-full bg-white px-6 py-10 flex flex-col items-start">
+    <section id="courseView" className="w-full bg-white px-6 py-10 flex flex-col items-start">
       <h2 className="text-[28px] font-bold mb-8">Kursvy</h2>
 
       <div className="bg-stone-50 rounded-2xl border border-stone-300 p-8 max-w-8xl w-full">
@@ -20,7 +20,7 @@ function CourseView() {
           <PrimaryButton text="Anmäl dig nu" dark={true} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

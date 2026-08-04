@@ -7,14 +7,16 @@ import CourseView from "./components/CourseView";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      <InfoSection />
-      <CourseCards />
-      <CourseView />
-      <ContactForm />
+      <main>
+        <InfoSection />
+        <CourseCards />
+        <CourseView />
+        <ContactForm />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
