@@ -1,5 +1,7 @@
 import Header from './components/Header/Header';
 import InfoSection from './components/InfoSection/InfoSection';
+import Footer from './components/Footer/Footer';
+import ContactForm from './components/ContactForm/ContactForm';
 
 function App() {
 
@@ -7,6 +9,8 @@ function App() {
     <div>
       <Header />
       <InfoSection />
+      <ContactForm />
+      <Footer />
     </div>
   )
 }
