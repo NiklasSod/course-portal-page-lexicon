@@ -1,16 +1,17 @@
 import CourseCard from "../CourseCard/CourseCard";
-import courseJson from "../../data/courseCards.json";
+import courseJson from "../../data/courseCards.json"; // TODO remove and use a fetch in a useEffect
 
 function CourseCards() {
   return (
     <section>
       <h2>Populära kurser</h2>
       <div>
-        {Object.entries(courseJson).map((data) => (
+        {courseJson.map((course, index) => (
           <CourseCard
-            title={data[1].title}
-            category={data[1].category}
-            link={data[1].link}
+            key={index}
+            title={course.title}
+            category={course.category}
+            description={course.description}
           />
         ))}
       </div>
