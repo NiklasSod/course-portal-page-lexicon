@@ -29,13 +29,13 @@ function CourseCards() {
   }, []);
 
   return (
-    <section id="courses">
+    <section id="courses" className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12">
       { loading ? ( 
-        <div className="max-w-7xl mx-auto px-4 py-10 min-h-100">
+        <div className="max-w-7xl mx-auto min-h-100">
           <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>
         </div> 
       ) : (
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div>
           <h2 className="text-[28px] font-bold mb-6">Populära kurser</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course, index) => (

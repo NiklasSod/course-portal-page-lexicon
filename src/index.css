@@ -8,10 +8,7 @@
     --color-subheading: #555555;
     --color-btn-dark: #2C2C2C;
     --color-footer-text: #666666;
-}
-
-body {
-    color: var(--color-body);
+    --color-page-bg: #F5F5F5;
 }
 
 @layer base {
@@ -25,5 +22,6 @@ body {
 
     body {
         margin: 0;
+        padding: 0;
     }
 }
