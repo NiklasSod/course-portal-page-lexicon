@@ -1,6 +1,14 @@
 import PrimaryButton from "../Buttons/PrimaryButton";
 
-function CourseCard({ title, category }: { title: string; category: string }) {
+function CourseCard({
+  title,
+  category,
+  link,
+}: {
+  title: string;
+  category: string;
+  link: string;
+}) {
   return (
     <div>
       <span>{category}</span>
