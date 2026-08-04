@@ -1,0 +1,22 @@
+{
+  "1": {
+    "title": "Webbutveckling från grunden",
+    "link": "/link1"
+  },
+  "2": {
+    "title": "C# och ASP.NET Core",
+    "link": "/link-2"
+  },
+  "3": {
+    "title": "Responsiv design med CSS",
+    "link": "/link-3"
+  },
+  "4": {
+    "title": "JavaScript för webb",
+    "link": "/link-4"
+  },
+  "5": {
+    "title": "Nyheter, ny kurs om tillgänglighet",
+    "link": "/link-5"
+  }
+}
