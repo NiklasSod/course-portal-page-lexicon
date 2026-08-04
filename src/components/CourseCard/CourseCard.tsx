@@ -1,7 +1,7 @@
 import PrimaryButton from "../Buttons/PrimaryButton";
 import { useState } from 'react'
 
-interface CourseCardProps {
+export interface CourseCardProps {
   title: string;
   category: string;
   description: string;
