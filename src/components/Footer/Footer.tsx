@@ -1,7 +1,7 @@
 function Footer (){
 
     return(
-        <footer className="bg-stone-50 text-stone-800 py-6 px-12 flex justify-between items-center border-t border-stone-300">
+        <footer className="bg-stone-50 text-stone-800 py-6 px-6 md:px-12 flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:gap-0 border-t border-stone-300">
             <p className="text-sm text-stone-500">Kursportalen © 2026</p>
             <nav className="flex gap-8">
                 <a href="/" className="text-sm text-stone-500 hover:text-stone-800 no-underline transition-colors">Integritetspolicy</a>
