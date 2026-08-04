@@ -33,8 +33,8 @@ function CourseCards() {
       { loading ? ( 
         <p>Laddar kurser...</p> 
       ) : (
-        <section className="max-w-7xl mx-auto px-4 py-12">
-          <h2 className="text-[28px] font-bold mb-8">Populära kurser</h2>
+        <section className="max-w-7xl mx-auto px-4 py-10">
+          <h2 className="text-[28px] font-bold mb-6">Populära kurser</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course, index) => (
               <CourseCard
