@@ -44,7 +44,7 @@ function CourseCards() {
         <div className="max-w-7xl mx-auto pb-6">
           <h2 className="text-[28px] font-bold mb-6">Populära kurser</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-            {courses.map((course, index) => (
+            {courses.slice(0, 6).map((course, index) => (
               <div key={index + course.title} className={getColSpan(courses.length, index)}>
                 <CourseCard
                   title={course.title}
