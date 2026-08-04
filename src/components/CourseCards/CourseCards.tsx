@@ -24,7 +24,7 @@ function CourseCards() {
       });
   }, []);
   return (
-    <>
+    <div  id="courses">
       { loading ? ( 
         <p>Laddar kurser...</p> // TODO reminder liten styling på denna text också då den syns i 1 sekund
       ) : (
@@ -42,7 +42,7 @@ function CourseCards() {
           </div>
         </section>)
       }
-    </>
+    </div>
   );
 }
 
