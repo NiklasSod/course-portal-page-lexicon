@@ -5,13 +5,15 @@ function CourseCards() {
     "Webbutveckling från grunden",
     "C# och ASP.NET Core",
     "Responsiv design med CSS",
+    "C# och ASP.NET Core",
+    "Responsiv design med CSS",
   ];
   return (
     <section>
       <h2>Populära kurser</h2>
       <div>
         {courses.map((name) => (
-          <CourseCard title={name} description="beskrivning här" />
+          <CourseCard title={name} category="</>" />
         ))}
       </div>
     </section>
