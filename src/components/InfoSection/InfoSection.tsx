@@ -1,11 +1,9 @@
-import styles from './InfoSection.module.css'
-
 function InfoSection() {
 
   return (
-    <div className={styles.infoSection}>
-      <h1 className={styles.header}>Lär dig bygga moderna webbapplikationer</h1>
-      <p className={styles.description}>Praktiska kurser inom webbutveckling, design och moderna verktyg.</p>
+    <div className="py-20 px-12 bg-stone-50 border border-neutral-200 flex flex-col justify-center items-center gap-4">
+      <h1 className="text-neutral-900 font-bold text-4xl">Lär dig bygga moderna webbapplikationer</h1>
+      <p className="text-neutral-600 font-normal text-lg">Praktiska kurser inom webbutveckling, design och moderna verktyg.</p>
       {/* todo fix buttons */}
       <div>
         <button>Hej 1</button>
