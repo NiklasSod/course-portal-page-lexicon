@@ -4,7 +4,7 @@ import { scrollToElement } from '../utils/scroll'
 function InfoSection() {
 
   return (
-    <section id="hero" className="py-20 px-12 bg-stone-50 border border-neutral-200 flex flex-col justify-center items-center gap-4">
+    <section id="hero" className="py-20 px-12 bg-stone-50 border-b border-border flex flex-col justify-center items-center gap-4">
       <h1 className="font-bold text-4xl text-center">Lär dig bygga moderna webbapplikationer</h1>
       <p className="text-subheading font-normal text-lg text-center">Praktiska kurser inom webbutveckling, design och moderna verktyg.</p>
       <div className="flex flex-col sm:flex-row gap-3">

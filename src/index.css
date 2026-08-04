@@ -9,6 +9,7 @@
     --color-btn-dark: #2C2C2C;
     --color-footer-text: #666666;
     --color-page-bg: #F5F5F5;
+    --color-border: #E5E5E5;
 }
 
 @layer base {
