@@ -3,7 +3,7 @@ import courseJson from "../../data/courseCards.json"; // TODO remove and use a f
 
 function CourseCards() {
   return (
-    <section>
+    <section id="courses">
       <h2>Populära kurser</h2>
       <div>
         {courseJson.map((course, index) => (
