@@ -10,6 +10,7 @@
     --color-footer-text: #666666;
     --color-page-bg: #F5F5F5;
     --color-border: #E5E5E5;
+    --color-tag: #F0EDE6;
 }
 
 @layer base {
