@@ -74,19 +74,17 @@ function CourseCards() {
             </div>
           </div>
 
-          <div id="course-grid" aria-live="polite">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-              {filteredCourses.slice(0, 6).map((course, index) => (
-                <div key={index + course.title} className={getColSpan(filteredCourses.length, index)}>
-                  <CourseCard
-                    title={course.title}
-                    category={course.category}
-                    description={course.description}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <ul id="course-grid" aria-live="polite" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+            {filteredCourses.slice(0, 6).map((course, index) => (
+              <li key={index + course.title} className={getColSpan(filteredCourses.length, index)}>
+                <CourseCard
+                  title={course.title}
+                  category={course.category}
+                  description={course.description}
+                />
+              </li>
+            ))}
+          </ul>
         </div>)
       }
     </section>
