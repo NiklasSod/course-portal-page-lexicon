@@ -1,4 +1,3 @@
-
 import PrimaryButton from "./PrimaryButton";
 
 interface CardModalProps {
@@ -8,8 +7,12 @@ interface CardModalProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-function CardModal({title, category, description, setIsOpen}: CardModalProps) {
-
+function CardModal({
+  title,
+  category,
+  description,
+  setIsOpen,
+}: CardModalProps) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
@@ -18,10 +21,16 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
       <div
         className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-label="Kursinfo"
       >
         <div className="flex items-center justify-between border-b pb-3">
           <div>
-            <span className="text-xs font-semibold px-2 py-1 bg-gray-100 rounded text-gray-700">
+            <span
+              className="text-xs font-semibold px-2 py-1 bg-gray-100 rounded text-gray-700"
+              aria-hidden="true"
+              role="img"
+            >
               {category}
             </span>
             <h2 className="text-xl font-bold text-gray-900 mt-2">{title}</h2>
@@ -35,9 +44,7 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
           </button>
         </div>
 
-        <div className="py-4 text-gray-600 leading-relaxed">
-          {description}
-        </div>
+        <div className="py-4 text-gray-600 leading-relaxed">{description}</div>
 
         <div className="flex justify-end pt-3 border-t">
           <PrimaryButton
@@ -48,7 +55,7 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default CardModal
+export default CardModal;
