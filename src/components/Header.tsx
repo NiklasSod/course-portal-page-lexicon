@@ -7,7 +7,13 @@ function Header() {
   return (
     <header className="py-4 px-6 md:py-6 md:px-12 bg-white border-b border-border">
       <div className="flex justify-between items-center">
-        <span className="font-bold text-2xl">Kursportalen</span>
+        <a 
+          href="/" 
+          aria-label="Startsida" 
+          className="font-bold text-2xl no-underline text-inherit cursor-pointer"
+        >
+          Kursportalen
+        </a>
 
         {/* Hamburgermeny */}
         <button
