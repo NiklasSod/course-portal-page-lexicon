@@ -43,6 +43,7 @@ function ContactForm() {
                         className={`bg-gray-100 border rounded-md px-4 py-2.5 outline-none focus:ring-2 ${
                             errors.name ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-stone-400"
                         }`}
+                        aria-required
                     />
                     {errors.name && <span className="text-red-500 text-xs mt-0.5">{errors.name}</span>}
                 </label>
@@ -61,6 +62,7 @@ function ContactForm() {
                         className={`bg-gray-100 border rounded-md px-4 py-2.5 outline-none focus:ring-2 ${
                             errors.email ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-stone-400"
                         }`}
+                        aria-required
                     />
                     {errors.email && <span className="text-red-500 text-xs mt-0.5">{errors.email}</span>}
                 </label>
@@ -78,6 +80,7 @@ function ContactForm() {
                         className={`bg-gray-100 border rounded-md px-4 py-2.5 outline-none focus:ring-2 resize-none ${
                             errors.message ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-stone-400"
                         }`}
+                        aria-required
                     />
                     {errors.message && <span className="text-red-500 text-xs mt-0.5">{errors.message}</span>}
                 </label>
