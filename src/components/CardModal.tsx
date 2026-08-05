@@ -1,5 +1,5 @@
-
 import PrimaryButton from "./PrimaryButton";
+import CourseCategory from "./CourseCategory";
 
 interface CardModalProps {
   title: string;
@@ -23,9 +23,7 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
       >
         <div className="flex items-center justify-between border-b pb-3">
           <div>
-            <span className="text-xs font-semibold px-2 py-1 bg-gray-100 rounded text-gray-700">
-              {category}
-            </span>
+            <CourseCategory category={category} />
             <h2 className="text-xl font-bold text-gray-900 mt-2">{title}</h2>
           </div>
           <button

@@ -1,112 +1,112 @@
 [
   {
     "title": "Webbutveckling från grunden",
-    "category": "</>",
+    "category": "/",
     "description": "Lär dig att bygga moderna webbplatser från scratch. Vi går igenom grunderna i HTML, CSS och JavaScript samt hur du strukturerar dina projekt för webben."
   },
   {
     "title": "C# och ASP.NET Core",
-    "category": "<C#>",
+    "category": "C#",
     "description": "Fördjupa dig i objektorienterad programmering och backend-utveckling med C#. Skapa kraftfulla API:er och skalbara webbapplikationer med ASP.NET Core."
   },
   {
     "title": "Responsiv design med CSS",
-    "category": "<CSS>",
+    "category": "CSS",
     "description": "Skapa webbplatser som ser fantastiska ut på alla skärmstorlekar. Lär dig hantera Flexbox, CSS Grid, media queries och moderna layouttekniker."
   },
   {
     "title": "JavaScript för webb",
-    "category": "<JS>",
+    "category": "JS",
     "description": "Gör dina webbsidor interaktiva och dynamiska. Bli bekväm med DOM-manipulering, händelsehantering, async/await samt hantering av API-anrop."
   },
   {
     "title": "Nyheter, ny kurs om tillgänglighet",
-    "category": "</>",
+    "category": "/",
     "description": "Vi lanserar en ny kurs i tillgänglighet (WCAG)! Lär dig hur du skapar digitala produkter och gränssnitt som fungerar för alla användare oavsett funktionsvariationer."
    },
   {
     "title": "Next.js från grunden",
-    "category": "<Next.js>",
+    "category": "Next.js",
     "description": "Lär dig bygga blixtsnabba React-applikationer med Next.js. Vi täcker App Router, server components, routing och hur du driftsätter dina projekt."
   },
   {
     "title": "Fullstack-utveckling med Next.js",
-    "category": "<Next.js>",
+    "category": "Next.js",
     "description": "Ta dina Next.js-kunskaper till nästa nivå. Bygg kompletta fullstack-applikationer med Server Actions, databasintegrationer och autentisering."
   },
   {
     "title": "Prestanda och SEO i Next.js",
-    "category": "<Next.js>",
+    "category": "Next.js",
     "description": "Optimera dina Next.js-applikationer för maximal prestanda och sökoptimering. Lär dig hantera bildoptimering, caching-strategier och ISR (Incremental Static Regeneration)."
   },
   {
     "title": "Avancerad CSS-animering och transformering",
-    "category": "<CSS>",
+    "category": "CSS",
     "description": "Ta användarupplevelsen till nästa nivå med mjuk grafik och dynamiska effekter. Bemästra CSS keyframes, transitions, 3D-transformeringar och prestandaoptimering."
   },
   {
     "title": "CSS-arkitektur och BEM",
-    "category": "<CSS>",
+    "category": "CSS",
     "description": "Skriv ren, underhållsbar och skalbar kod för stora webbprojekt. Lär dig organisera dina stilfiler effektivt med BEM-metodiken och moderna CSS-variabler."
   },
   {
     "title": "Sass och CSS-preprocessors",
-    "category": "<CSS>",
+    "category": "CSS",
     "description": "Effektivisera ditt korskrivande med kraftfulla verktyg. Utnyttja nästlade regler, mixins, funktioner och moduler för att bygga mer flexibla stildelar."
   },
   {
     "title": "Python för nybörjare",
-    "category": "<Python>",
+    "category": "Python",
     "description": "Lär dig ett av världens mest populära programmeringsspråk från grunden. Vi går igenom variabler, datastrukturer, villkor och loopar i Python."
   },
   {
     "title": "Dataanalys med Python",
-    "category": "<Python>",
+    "category": "Python",
     "description": "Upptäck hur du analyserar och visualiserar data. Lär dig använda kraftfulla Python-bibliotek som Pandas, NumPy och Matplotlib för att dra insikter ur stora datamängder."
   },
   {
     "title": "Backend-utveckling i Python med FastAPI",
-    "category": "<Python>",
+    "category": "Python",
     "description": "Bygg snabba och moderna REST-API:er med FastAPI och Python. Lär dig asynkron programmering, datavalidering med Pydantic och databasanslutningar."
   },
   {
     "title": "Grundläggande Java-programmering",
-    "category": "<Java>",
+    "category": "Java",
     "description": "Starta din resa i objektorienterad programmering med Java. Vi går igenom klasstruktur, arv, polymorfism och hur du skriver ren och strukturerad kod."
   },
   {
     "title": "Enterprise-backend med Java och Spring Boot",
-    "category": "<Java>",
+    "category": "Java",
     "description": "Skapa skalbara mikrotjänster och enterprise-applikationer. Lär dig hantera dependency injection, Spring Data JPA och säkerhet med Spring Security."
   },
   {
     "title": "Enhetstestning och TDD i Java",
-    "category": "<Java>",
+    "category": "Java",
     "description": "Skriv robust och kvalitetssäkrad Java-kod. Lär dig testdriven utveckling (TDD), enhetstestning med JUnit 5 och mockning med Mockito."
   },
   {
     "title": "LINQ och datahantering i C#",
-    "category": "<C#>",
+    "category": "C#",
     "description": "Lär dig skriva kraftfulla och läsbara datasökningar direkt i koden. Utforska metod- och frågesyntax i LINQ för att effektivt filtrera, sortera och transformera datamängder."
   },
   {
     "title": "Asynkron programmering med async/await",
-    "category": "<C#>",
+    "category": "C#",
     "description": "Bygg högpresterande applikationer utan trådlåsningar. Bemästra async, await, Tasks och CancellationToken för optimal trådhändelsehantering och I/O-operationer."
   },
   {
     "title": "Entity Framework Core och databaser",
-    "category": "<C#>",
+    "category": "C#",
     "description": "Koppla samman C# med relationaldatabaser via ORM. Lär dig hantera migrations, LINQ-queries mot SQL Server, relationer mellan modeller och databasoptimering."
   },
   {
     "title": "Enhetstestning och TDD i C#",
-    "category": "<C#>",
+    "category": "C#",
     "description": "Säkerställ koden med automatiserade tester. Skriv robusta enhetstester med xUnit eller NUnit, mocka beroenden med Moq och tillämpa testdriven utveckling."
   },
   {
     "title": "Mikrotjänster och arkitektur i .NET",
-    "category": "<C#>",
+    "category": "C#",
     "description": "Designa skalbara och distribuerade system. Lär dig bygga mikrotjänster med .NET, hantera kommunikation via REST och meddelandeköer samt strukturera ren arkitektur."
   }
 ]

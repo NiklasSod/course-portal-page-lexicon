@@ -1,6 +1,7 @@
 import PrimaryButton from "./PrimaryButton";
 import { useState } from 'react'
 import CardModal from './CardModal'
+import CourseCategory from "./CourseCategory";
 
 export interface CourseCardProps {
   title: string;
@@ -14,13 +15,7 @@ function CourseCard({title, category, description}: CourseCardProps) {
   return (
     <>
       <div className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col justify-between h-full">
-        <span 
-          className="inline-block bg-tag text-md font-bold px-2 py-3 rounded mb-3 w-max leading-none"
-          aria-hidden="true"
-          role="img"
-        >
-          {category}
-        </span>
+        <CourseCategory category={category} />
         <h3 className="text-[20px] font-bold mb-3">{title}</h3>
         <PrimaryButton
           size="small" 
