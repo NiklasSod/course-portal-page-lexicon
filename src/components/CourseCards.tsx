@@ -44,16 +44,14 @@ function CourseCards() {
   return (
     <section id="courses" className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12" aria-label="Kursutbud">
       { loading ? ( 
-        <div className="max-w-7xl mx-auto min-h-100" aria-live="polite">
+        <header className="max-w-7xl mx-auto min-h-100" aria-live="polite">
           <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>
-        </div> 
+        </header> 
 
       ) : (
-
-        <div>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <>
+          <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <h2 className="text-[28px] font-bold">Populära kurser</h2>
-            
             <div className="flex items-center gap-2">
               <label htmlFor="category-filter" className="text-sm font-medium text-gray-900">
                 Filtrera:
@@ -72,8 +70,7 @@ function CourseCards() {
                 ))}
               </select>
             </div>
-          </div>
-
+          </header>
           <ul id="course-grid" aria-live="polite" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {filteredCourses.slice(0, 6).map((course, index) => (
               <li key={index + course.title} className={getColSpan(filteredCourses.length, index)}>
@@ -85,7 +82,7 @@ function CourseCards() {
               </li>
             ))}
           </ul>
-        </div>)
+        </>)
       }
     </section>
   );
