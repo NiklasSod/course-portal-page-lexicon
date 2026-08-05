@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NavList from "./NavList";
+import HeaderNav from "./HeaderNav";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,19 +27,16 @@ function Header() {
         </button>
 
         {/* Desktopmeny */}
-        <nav className="hidden md:flex">
-          <NavList ulClassName="flex gap-8 list-none m-0 p-0" />
-        </nav>
+        <HeaderNav navClassName="hidden md:flex" ulClassName="flex gap-8 list-none m-0 p-0" />
       </div>
 
       {/* Mobilmeny */}
       {menuOpen && (
-        <nav className="md:hidden pt-4 pb-2">
-          <NavList 
-            ulClassName="flex flex-col gap-4 list-none m-0 p-0" 
-            onItemClick={() => setMenuOpen(false)} 
-          />
-        </nav>
+      <HeaderNav 
+        navClassName="md:hidden pt-4 pb-2" 
+        ulClassName="flex flex-col gap-4 list-none m-0 p-0" 
+        onItemClick={() => setMenuOpen(false)} 
+      />
       )}
     </header>
   )
