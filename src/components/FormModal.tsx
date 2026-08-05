@@ -16,6 +16,7 @@ export function FormModal({ name, email, message, setIsOpen }: FormModalProps) {
   <div
     className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl"
     onClick={(e) => e.stopPropagation()}
+    role="dialog"
   >
     <div className="flex items-start justify-between border-b pb-4 mb-4">
       <div>
