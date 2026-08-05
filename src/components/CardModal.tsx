@@ -18,6 +18,8 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
       <div
         className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-label="Kursinfo"
       >
         <div className="flex items-center justify-between border-b pb-3">
           <div>
