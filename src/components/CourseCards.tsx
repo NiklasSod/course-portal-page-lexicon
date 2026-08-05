@@ -5,6 +5,7 @@ import CourseCard, { CourseCardProps } from "./CourseCard";
 function CourseCards() {
   const [courses, setCourses] = useState<CourseCardProps[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("Alla");
 
   useEffect(() => {
@@ -14,7 +15,13 @@ function CourseCards() {
       .then((response) => {
         setTimeout(() => {
           if (isMounted) {
-            setCourses(response.data);
+            if (Array.isArray(response.data) && response.data.length > 0) {
+              setCourses(response.data);
+              setError(null);
+            } else {
+              setError("Kunde inte ladda kurser.");
+              setCourses([]);
+            }
             setLoading(false);
           }
         }, 1000);
@@ -22,6 +29,9 @@ function CourseCards() {
       .catch((err) => {
         if (isMounted) {
           console.error("Fel vid hämtning:", err);
+          setLoading(false);
+          setCourses([]);
+          setError("Kunde inte ladda kurser.");
         }
       });
     return () => {
@@ -29,10 +39,11 @@ function CourseCards() {
     };
   }, []);
 
-  const categories = ["Alla", ...Array.from(new Set(courses.map((c) => c.category)))];
+  const safeCourses = Array.isArray(courses) ? courses : [];
+  const categories = ["Alla", ...Array.from(new Set(safeCourses.map((c) => c.category)))];
   const filteredCourses = selectedCategory === "Alla"
-    ? courses
-    : courses.filter((course) => course.category === selectedCategory);
+    ? safeCourses
+    : safeCourses.filter((course) => course.category === selectedCategory);
 
   const getColSpan = (total: number, index: number) => {
     if (total === 2) return "lg:col-span-3";
@@ -47,12 +58,16 @@ function CourseCards() {
         <header className="max-w-7xl mx-auto min-h-100" aria-live="polite">
           <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>
         </header> 
-
+      ) : error ? (
+         <header className="max-w-7xl mx-auto min-h-100" aria-live="polite">
+            <h2 className="text-[28px] font-bold mb-6 text-red-600">{error}</h2>
+          </header>
       ) : (
         <>
           <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <h2 className="text-[28px] font-bold">Populära kurser</h2>
             <label htmlFor="category-filter" className="flex items-center gap-2 text-sm font-medium text-gray-900">
+            <label htmlFor="category-filter" className="flex items-center gap-2 text-sm font-medium text-gray-900"></label>
               Filtrera:
               <select
                 id="category-filter"
@@ -71,7 +86,7 @@ function CourseCards() {
           </header>
           <ul id="course-grid" aria-live="polite" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {filteredCourses.slice(0, 6).map((course, index) => (
-              <li key={index + course.title} className={getColSpan(filteredCourses.length, index)}>
+              <li key={index} className={getColSpan(filteredCourses.length, index)}>
                 <CourseCard
                   title={course.title}
                   category={course.category}
