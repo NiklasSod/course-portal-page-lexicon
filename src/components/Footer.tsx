@@ -13,21 +13,9 @@ function Footer (){
             </button>
             <nav className="flex">
                 <ul className="flex gap-8 list-none m-0 p-0">
-                <li>
-                    <a href="#" className="text-sm text-footer-text hover:text-stone-500 no-underline transition-colors leading-none">
-                    Integritetspolicy
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="text-sm text-footer-text hover:text-stone-500 no-underline transition-colors leading-none">
-                    Villkor
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="text-sm text-footer-text hover:text-stone-500 no-underline transition-colors leading-none">
-                    Support
-                    </a>
-                </li>
+                <li><a href="#" className="text-sm text-footer-text hover:text-stone-500 no-underline transition-colors leading-none">Integritetspolicy</a></li>
+                <li><a href="#" className="text-sm text-footer-text hover:text-stone-500 no-underline transition-colors leading-none">Villkor</a></li>
+                <li><a href="#" className="text-sm text-footer-text hover:text-stone-500 no-underline transition-colors leading-none">Support</a></li>
                 </ul>
             </nav>
         </footer>
