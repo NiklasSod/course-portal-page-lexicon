@@ -1,9 +1,9 @@
 import PrimaryButton from "./PrimaryButton";
 import { getFutureDate } from '../utils/getFutureDate';
 
-function CourseView() {
+function NewCourseView() {
   return (
-    <section id="courseView" className="w-full bg-white py-4 px-6 md:py-6 md:px-12 flex flex-col items-start">
+    <section id="newCourseView" className="w-full bg-white py-4 px-6 md:py-6 md:px-12 flex flex-col items-start">
       <h2 className="text-[28px] font-bold mb-6">Nya kurser</h2>
 
       <div className="bg-stone-50 rounded-lg border border-stone-300 p-8 max-w-8xl w-full">
@@ -25,4 +25,4 @@ function CourseView() {
   );
 }
 
-export default CourseView;
+export default NewCourseView;

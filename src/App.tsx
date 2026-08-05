@@ -3,7 +3,7 @@ import InfoSection from "./components/InfoSection";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import CourseCards from "./components/CourseCards";
-import CourseView from "./components/CourseView";
+import NewCourseView from "./components/NewCourseView";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <main>
         <InfoSection />
         <CourseCards />
-        <CourseView />
+        <NewCourseView />
         <ContactForm />
       </main>
       <Footer />
