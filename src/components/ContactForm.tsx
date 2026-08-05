@@ -28,10 +28,13 @@ function ContactForm() {
         <section id="contact-form-section" className="py-4 px-6 md:py-12 md:px-12">
             <form id="contact-form" onSubmit={handleSubmit} className="flex flex-col gap-5 w-full max-w-xl mx-auto">
                 <h2 className="text-[28px] font-bold text-center leading-none">Kontakt</h2>
-                <label className="flex flex-col gap-1 text-md font-bold">
+                <label htmlFor="name" className="flex flex-col gap-1 text-md font-bold">
                     Namn:
                     <input
                         type="text"
+                        id="name" 
+                        name="name" 
+                        autoComplete="name"
                         value={name}
                         onChange={(e) => {
                             setName(e.target.value);
@@ -43,10 +46,13 @@ function ContactForm() {
                     />
                     {errors.name && <span className="text-red-500 text-xs mt-0.5">{errors.name}</span>}
                 </label>
-                <label className="flex flex-col gap-1 text-md font-bold">
+                <label htmlFor="email"className="flex flex-col gap-1 text-md font-bold">
                     E-post:
                     <input
                         type="email"
+                        id="email" 
+                        name="email" 
+                        autoComplete="email"
                         value={email}
                         onChange={(e) => {
                             setEmail(e.target.value);
@@ -58,9 +64,11 @@ function ContactForm() {
                     />
                     {errors.email && <span className="text-red-500 text-xs mt-0.5">{errors.email}</span>}
                 </label>
-                <label className="flex flex-col gap-1 text-md font-bold">
+                <label htmlFor="message" className="flex flex-col gap-1 text-md font-bold">
                     Meddelande:
                     <textarea
+                        id="message" 
+                        name="message"
                         value={message}
                         onChange={(e) => {
                             setMessage(e.target.value);
