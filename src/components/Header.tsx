@@ -56,21 +56,22 @@ function Header() {
           <a
             href="/"
             className="text-menu no-underline hover:text-neutral-900 transition-colors"
+            role="button"
           >
             Startsida
           </a>
-          <a
+          <button
             onClick={() => scrollToElement("courses")}
             className="text-menu no-underline hover:text-neutral-900 transition-colors"
           >
             Kurser
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => scrollToElement("contact-form")}
             className="text-menu no-underline hover:text-neutral-900 transition-colors"
           >
             Kontakt
-          </a>
+          </button>
         </nav>
       )}
     </header>
