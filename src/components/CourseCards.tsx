@@ -52,10 +52,8 @@ function CourseCards() {
         <>
           <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <h2 className="text-[28px] font-bold">Populära kurser</h2>
-            <div className="flex items-center gap-2">
-              <label htmlFor="category-filter" className="text-sm font-medium text-gray-900">
-                Filtrera:
-              </label>
+            <label htmlFor="category-filter" className="flex items-center gap-2 text-sm font-medium text-gray-900">
+              Filtrera:
               <select
                 id="category-filter"
                 value={selectedCategory}
@@ -69,7 +67,7 @@ function CourseCards() {
                   </option>
                 ))}
               </select>
-            </div>
+            </label>
           </header>
           <ul id="course-grid" aria-live="polite" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {filteredCourses.slice(0, 6).map((course, index) => (
