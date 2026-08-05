@@ -23,9 +23,30 @@ function Header() {
         {/* Desktopmeny */}
         <nav className="hidden md:flex">
           <ul className="flex gap-8 list-none m-0 p-0">
-            <li><a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a></li>
-            <li><a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a></li>
-            <li><a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a></li>
+            <li>
+              <button 
+                onClick={() => scrollToElement("top")} 
+                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              >
+                Startsida
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToElement("courses")} 
+                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              >
+                Kurser
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToElement("contact-form")} 
+                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              >
+                Kontakt
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -34,9 +55,30 @@ function Header() {
       {menuOpen && (
         <nav className="md:hidden pt-4 pb-2">
           <ul className="flex flex-col gap-4 list-none m-0 p-0">
-            <li><a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a></li>
-            <li><a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a></li>
-            <li><a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a></li>
+            <li>
+              <button 
+                onClick={() => scrollToElement("top")} 
+                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              >
+                Startsida
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToElement("courses")} 
+                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              >
+                Kurser
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToElement("contact-form")} 
+                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              >
+                Kontakt
+              </button>
+            </li>
           </ul>
         </nav>
       )}
