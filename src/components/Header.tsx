@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { scrollToElement } from '../utils/scroll'
+import NavList from "./NavList";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,64 +28,17 @@ function Header() {
 
         {/* Desktopmeny */}
         <nav className="hidden md:flex">
-          <ul className="flex gap-8 list-none m-0 p-0">
-            <li>
-              <button 
-                onClick={() => scrollToElement("top")} 
-                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
-              >
-                Startsida
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToElement("courses")} 
-                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
-              >
-                Kurser
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToElement("contact-form")} 
-                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
-              >
-                Kontakt
-              </button>
-            </li>
-          </ul>
+          <NavList ulClassName="flex gap-8 list-none m-0 p-0" />
         </nav>
       </div>
 
       {/* Mobilmeny */}
       {menuOpen && (
         <nav className="md:hidden pt-4 pb-2">
-          <ul className="flex flex-col gap-4 list-none m-0 p-0">
-            <li>
-              <button 
-                onClick={() => scrollToElement("top")} 
-                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
-              >
-                Startsida
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToElement("courses")} 
-                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
-              >
-                Kurser
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => scrollToElement("contact-form")} 
-                className="text-menu no-underline hover:text-neutral-900 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
-              >
-                Kontakt
-              </button>
-            </li>
-          </ul>
+          <NavList 
+            ulClassName="flex flex-col gap-4 list-none m-0 p-0" 
+            onItemClick={() => setMenuOpen(false)} 
+          />
         </nav>
       )}
     </header>

@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Startsida",
+    "target": "top"
+  },
+  {
+    "label": "Kurser",
+    "target": "courses"
+  },
+  {
+    "label": "Kontakt",
+    "target": "contact-form"
+  }
+]
