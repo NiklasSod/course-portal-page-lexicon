@@ -55,6 +55,7 @@ function ContactForm() {
                 ? "border-red-500 focus:ring-red-400"
                 : "border-gray-300 focus:ring-stone-400"
             }`}
+            aria-required
           />
           {errors.name && (
             <span className="text-red-500 text-xs mt-0.5">{errors.name}</span>
@@ -74,6 +75,7 @@ function ContactForm() {
                 ? "border-red-500 focus:ring-red-400"
                 : "border-gray-300 focus:ring-stone-400"
             }`}
+            aria-required
           />
           {errors.email && (
             <span className="text-red-500 text-xs mt-0.5">{errors.email}</span>
@@ -94,6 +96,7 @@ function ContactForm() {
                 ? "border-red-500 focus:ring-red-400"
                 : "border-gray-300 focus:ring-stone-400"
             }`}
+            aria-required
           />
           {errors.message && (
             <span className="text-red-500 text-xs mt-0.5">
