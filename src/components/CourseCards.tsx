@@ -42,7 +42,7 @@ function CourseCards() {
   };
 
   return (
-    <section id="courses" className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12" aria-label="Kurser">
+    <section id="courses" className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12" aria-label="Kursutbud">
       { loading ? ( 
         <div className="max-w-7xl mx-auto min-h-100" aria-live="polite">
           <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>

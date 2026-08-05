@@ -25,7 +25,7 @@ function ContactForm() {
         }
     };
     return(
-        <section id="contact-form-section" className="py-4 px-6 md:py-12 md:px-12">
+        <section id="contact-form-section" className="py-4 px-6 md:py-12 md:px-12" aria-label="Kontaktformulär">
             <form id="contact-form" onSubmit={handleSubmit} className="flex flex-col gap-5 w-full max-w-xl mx-auto">
                 <h2 className="text-[28px] font-bold text-center leading-none">Kontakt</h2>
                 <label htmlFor="name" className="flex flex-col gap-1 text-md font-bold">
