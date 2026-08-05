@@ -28,6 +28,12 @@ function CourseCards() {
     };
   }, []);
 
+  const getColSpan = (total: number, index: number) => {
+    if (total === 4) return "lg:col-span-3";
+    if (total === 5) return index < 3 ? "lg:col-span-2" : "lg:col-span-3";
+    return "lg:col-span-2";
+  };
+
   return (
     <section id="courses" className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12">
       { loading ? ( 
@@ -37,14 +43,15 @@ function CourseCards() {
       ) : (
         <div>
           <h2 className="text-[28px] font-bold mb-6">Populära kurser</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {courses.map((course, index) => (
-              <CourseCard
-                key={index + course.title}
-                title={course.title}
-                category={course.category}
-                description={course.description}
-              />
+              <div key={index + course.title} className={getColSpan(courses.length, index)}>
+                <CourseCard
+                  title={course.title}
+                  category={course.category}
+                  description={course.description}
+                />
+              </div>
             ))}
           </div>
         </div>)
