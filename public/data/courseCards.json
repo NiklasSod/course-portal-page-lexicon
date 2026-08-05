@@ -23,5 +23,50 @@
     "title": "Nyheter, ny kurs om tillgänglighet",
     "category": "</>",
     "description": "Vi lanserar en ny kurs i tillgänglighet (WCAG)! Lär dig hur du skapar digitala produkter och gränssnitt som fungerar för alla användare oavsett funktionsvariationer."
+   },
+  {
+    "title": "Next.js från grunden",
+    "category": "<Next.js>",
+    "description": "Lär dig bygga blixtsnabba React-applikationer med Next.js. Vi täcker App Router, server components, routing och hur du driftsätter dina projekt."
+  },
+  {
+    "title": "Fullstack-utveckling med Next.js",
+    "category": "<Next.js>",
+    "description": "Ta dina Next.js-kunskaper till nästa nivå. Bygg kompletta fullstack-applikationer med Server Actions, databasintegrationer och autentisering."
+  },
+  {
+    "title": "Prestanda och SEO i Next.js",
+    "category": "<Next.js>",
+    "description": "Optimera dina Next.js-applikationer för maximal prestanda och sökoptimering. Lär dig hantera bildoptimering, caching-strategier och ISR (Incremental Static Regeneration)."
+  },
+  {
+    "title": "Python för nybörjare",
+    "category": "<Python>",
+    "description": "Lär dig ett av världens mest populära programmeringsspråk från grunden. Vi går igenom variabler, datastrukturer, villkor och loopar i Python."
+  },
+  {
+    "title": "Dataanalys med Python",
+    "category": "<Python>",
+    "description": "Upptäck hur du analyserar och visualiserar data. Lär dig använda kraftfulla Python-bibliotek som Pandas, NumPy och Matplotlib för att dra insikter ur stora datamängder."
+  },
+  {
+    "title": "Backend-utveckling i Python med FastAPI",
+    "category": "<Python>",
+    "description": "Bygg snabba och moderna REST-API:er med FastAPI och Python. Lär dig asynkron programmering, datavalidering med Pydantic och databasanslutningar."
+  },
+  {
+    "title": "Grundläggande Java-programmering",
+    "category": "<Java>",
+    "description": "Starta din resa i objektorienterad programmering med Java. Vi går igenom klasstruktur, arv, polymorfism och hur du skriver ren och strukturerad kod."
+  },
+  {
+    "title": "Enterprise-backend med Java och Spring Boot",
+    "category": "<Java>",
+    "description": "Skapa skalbara mikrotjänster och enterprise-applikationer. Lär dig hantera dependency injection, Spring Data JPA och säkerhet med Spring Security."
+  },
+  {
+    "title": "Enhetstestning och TDD i Java",
+    "category": "<Java>",
+    "description": "Skriv robust och kvalitetssäkrad Java-kod. Lär dig testdriven utveckling (TDD), enhetstestning med JUnit 5 och mockning med Mockito."
   }
 ]
