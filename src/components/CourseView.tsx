@@ -5,7 +5,7 @@ function CourseView() {
     <section id="courseView" className="w-full bg-white py-4 px-6 md:py-6 md:px-12 flex flex-col items-start">
       <h2 className="text-[28px] font-bold mb-6">Kursvy</h2>
 
-      <div className="bg-stone-50 rounded-2xl border border-stone-300 p-8 max-w-8xl w-full">
+      <div className="bg-stone-50 rounded-lg border border-stone-300 p-8 max-w-8xl w-full">
         <h2 className="text-2xl font-semibold mb-2">Webbutveckling från grunden</h2>
         <p className="text-subheading mb-6">En praktisk kurs för nybörjare.</p>
 
