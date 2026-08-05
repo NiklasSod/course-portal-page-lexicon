@@ -10,7 +10,8 @@ function CourseCards() {
   useEffect(() => {
     let isMounted = true;
 
-    axios.get<CourseCardProps[]>("/data/courseCards.json")
+    axios
+      .get<CourseCardProps[]>("/data/courseCards.json")
       .then((response) => {
         setTimeout(() => {
           if (isMounted) {
@@ -29,10 +30,14 @@ function CourseCards() {
     };
   }, []);
 
-  const categories = ["Alla", ...Array.from(new Set(courses.map((c) => c.category)))];
-  const filteredCourses = selectedCategory === "Alla"
-    ? courses
-    : courses.filter((course) => course.category === selectedCategory);
+  const categories = [
+    "Alla",
+    ...Array.from(new Set(courses.map((c) => c.category))),
+  ];
+  const filteredCourses =
+    selectedCategory === "Alla"
+      ? courses
+      : courses.filter((course) => course.category === selectedCategory);
 
   const getColSpan = (total: number, index: number) => {
     if (total === 2) return "lg:col-span-3";
@@ -42,20 +47,25 @@ function CourseCards() {
   };
 
   return (
-    <section id="courses" className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12" aria-label="Kurser">
-      { loading ? ( 
+    <section
+      id="courses"
+      className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12"
+      aria-label="Kursutbud"
+    >
+      {loading ? (
         <div className="max-w-7xl mx-auto min-h-100" aria-live="polite">
           <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>
-        </div> 
-
+        </div>
       ) : (
-
         <div>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <h2 className="text-[28px] font-bold">Populära kurser</h2>
-            
+
             <div className="flex items-center gap-2">
-              <label htmlFor="category-filter" className="text-sm font-medium text-gray-900">
+              <label
+                htmlFor="category-filter"
+                className="text-sm font-medium text-gray-900"
+              >
                 Filtrera:
               </label>
               <select
@@ -77,7 +87,10 @@ function CourseCards() {
           <div id="course-grid" aria-live="polite">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
               {filteredCourses.slice(0, 6).map((course, index) => (
-                <div key={index + course.title} className={getColSpan(filteredCourses.length, index)}>
+                <div
+                  key={index + course.title}
+                  className={getColSpan(filteredCourses.length, index)}
+                >
                   <CourseCard
                     title={course.title}
                     category={course.category}
@@ -87,8 +100,8 @@ function CourseCards() {
               ))}
             </div>
           </div>
-        </div>)
-      }
+        </div>
+      )}
     </section>
   );
 }
