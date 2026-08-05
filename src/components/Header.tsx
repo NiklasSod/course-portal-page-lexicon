@@ -21,19 +21,23 @@ function Header() {
         </button>
 
         {/* Desktopmeny */}
-        <nav className="hidden md:flex gap-8">
-          <a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a>
-          <a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a>
-          <a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
+        <nav className="hidden md:flex">
+          <ul className="flex gap-8 list-none m-0 p-0">
+            <li><a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a></li>
+            <li><a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a></li>
+            <li><a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a></li>
+          </ul>
         </nav>
       </div>
 
       {/* Mobilmeny */}
       {menuOpen && (
-        <nav className="md:hidden flex flex-col gap-4 pt-4 pb-2">
-          <a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a>
-          <a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a>
-          <a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a>
+        <nav className="md:hidden pt-4 pb-2">
+          <ul className="flex flex-col gap-4 list-none m-0 p-0">
+            <li><a href="/" className="text-menu no-underline hover:text-neutral-900 transition-colors">Startsida</a></li>
+            <li><a onClick={() => scrollToElement("courses")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kurser</a></li>
+            <li><a onClick={() => scrollToElement("contact-form")} className="text-menu no-underline hover:text-neutral-900 transition-colors">Kontakt</a></li>
+          </ul>
         </nav>
       )}
     </header>
