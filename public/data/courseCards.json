@@ -40,6 +40,21 @@
     "description": "Optimera dina Next.js-applikationer för maximal prestanda och sökoptimering. Lär dig hantera bildoptimering, caching-strategier och ISR (Incremental Static Regeneration)."
   },
   {
+    "title": "Avancerad CSS-animering och transformering",
+    "category": "<CSS>",
+    "description": "Ta användarupplevelsen till nästa nivå med mjuk grafik och dynamiska effekter. Bemästra CSS keyframes, transitions, 3D-transformeringar och prestandaoptimering."
+  },
+  {
+    "title": "CSS-arkitektur och BEM",
+    "category": "<CSS>",
+    "description": "Skriv ren, underhållsbar och skalbar kod för stora webbprojekt. Lär dig organisera dina stilfiler effektivt med BEM-metodiken och moderna CSS-variabler."
+  },
+  {
+    "title": "Sass och CSS-preprocessors",
+    "category": "<CSS>",
+    "description": "Effektivisera ditt korskrivande med kraftfulla verktyg. Utnyttja nästlade regler, mixins, funktioner och moduler för att bygga mer flexibla stildelar."
+  },
+  {
     "title": "Python för nybörjare",
     "category": "<Python>",
     "description": "Lär dig ett av världens mest populära programmeringsspråk från grunden. Vi går igenom variabler, datastrukturer, villkor och loopar i Python."
@@ -68,5 +83,30 @@
     "title": "Enhetstestning och TDD i Java",
     "category": "<Java>",
     "description": "Skriv robust och kvalitetssäkrad Java-kod. Lär dig testdriven utveckling (TDD), enhetstestning med JUnit 5 och mockning med Mockito."
+  },
+  {
+    "title": "LINQ och datahantering i C#",
+    "category": "<C#>",
+    "description": "Lär dig skriva kraftfulla och läsbara datasökningar direkt i koden. Utforska metod- och frågesyntax i LINQ för att effektivt filtrera, sortera och transformera datamängder."
+  },
+  {
+    "title": "Asynkron programmering med async/await",
+    "category": "<C#>",
+    "description": "Bygg högpresterande applikationer utan trådlåsningar. Bemästra async, await, Tasks och CancellationToken för optimal trådhändelsehantering och I/O-operationer."
+  },
+  {
+    "title": "Entity Framework Core och databaser",
+    "category": "<C#>",
+    "description": "Koppla samman C# med relationaldatabaser via ORM. Lär dig hantera migrations, LINQ-queries mot SQL Server, relationer mellan modeller och databasoptimering."
+  },
+  {
+    "title": "Enhetstestning och TDD i C#",
+    "category": "<C#>",
+    "description": "Säkerställ koden med automatiserade tester. Skriv robusta enhetstester med xUnit eller NUnit, mocka beroenden med Moq och tillämpa testdriven utveckling."
+  },
+  {
+    "title": "Mikrotjänster och arkitektur i .NET",
+    "category": "<C#>",
+    "description": "Designa skalbara och distribuerade system. Lär dig bygga mikrotjänster med .NET, hantera kommunikation via REST och meddelandeköer samt strukturera ren arkitektur."
   }
 ]
