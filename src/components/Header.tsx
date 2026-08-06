@@ -5,7 +5,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="py-4 px-6 md:py-6 md:px-12 bg-white border-b border-border">
+    <header className="py-4 px-6 md:py-6 md:px-12 border-b border-border">
       <div className="flex justify-between items-center">
         <a 
           href="/" 
