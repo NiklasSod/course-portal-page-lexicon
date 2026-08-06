@@ -32,15 +32,18 @@ function FooterNav() {
 
   return (
     <nav>
-        <ul className="flex gap-8 list-none m-0 p-0">
+      <ul className="flex gap-8 list-none m-0 p-0">
         {footerNavData.map((item) => (
-            <li key={item.href}>
-            <a href={item.href} className="text-slate-400 hover:text-slate-200 text-sm no-underline transition-colors leading-none">
+          <li key={item.href}>
+            <a
+              href={item.href}
+              className="text-[var(--color-subheading)] hover:text-[var(--color-body)] text-sm no-underline transition-colors leading-none"
+            >
               {item.label}
             </a>
-            </li>
+          </li>
         ))}
-        </ul>
+      </ul>
     </nav>
   );
 }

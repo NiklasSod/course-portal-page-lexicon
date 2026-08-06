@@ -56,7 +56,7 @@ function CourseCards() {
     <section id="courses" className="max-w-7xl mx-auto py-4 px-6 md:py-12 md:px-12" aria-label="Kursutbud">
       { loading ? ( 
         <header className="max-w-7xl mx-auto min-h-100" aria-live="polite">
-          <h2 className="text-[28px] font-bold mb-6">Laddar kurser...</h2>
+          <h2 className="text-[28px] font-bold mb-6 text-[var(--color-body)]">Laddar kurser...</h2>
         </header> 
       ) : error ? (
          <header className="max-w-7xl mx-auto min-h-100" aria-live="polite">
@@ -65,15 +65,17 @@ function CourseCards() {
       ) : (
         <>
           <header className="flex flex-row items-center justify-between gap-4 mb-6">
-            <h2 className="text-[28px] font-bold">Populära kurser</h2>
-            <label htmlFor="category-filter" className="flex items-center gap-2 text-sm font-medium text-gray-900">
-            <label htmlFor="category-filter" className="flex items-center gap-2 text-sm font-medium text-gray-900"></label>
-              Filtrera:
+            <h2 className="text-[28px] font-bold text-[var(--color-body)]">Populära kurser</h2>
+            <div className="flex items-center gap-2">
+              <label htmlFor="category-filter" className="text-sm font-medium text-[var(--color-subheading)]">
+                Filtrera:
+              </label>
               <select
                 id="category-filter"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 aria-controls="course-grid"
+                className="bg-[var(--color-root-bg)] border border-[var(--color-border)] text-[var(--color-body)] rounded-md px-3 py-1.5 text-sm"
               >
                 {categories.map((category) => (
                   <option key={category} value={category}>
@@ -81,7 +83,7 @@ function CourseCards() {
                   </option>
                 ))}
               </select>
-            </label>
+            </div>
           </header>
           <ul id="course-grid" aria-live="polite" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
             {filteredCourses.slice(0, 6).map((course, index) => (

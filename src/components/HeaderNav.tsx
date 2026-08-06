@@ -18,11 +18,14 @@ function HeaderNav({ navClassName, ulClassName, onItemClick, isMobile }: HeaderN
   const [headerNavData, setHeaderNavData] = useState<NavItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isDark, setIsDark] = useState(true);
+  const [isLight, setIsLight] = useState(false);
 
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark', isDark);
+  useEffect(() => {
+  document.documentElement.classList.toggle('light', isLight);
+}, [isLight]);
+
+  const toggleLightMode = () => {
+    setIsLight(!isLight);
   };
 
   useEffect(() => {
@@ -47,11 +50,11 @@ function HeaderNav({ navClassName, ulClassName, onItemClick, isMobile }: HeaderN
   return (
     <nav className={navClassName}>
       <button
-        onClick={toggleDarkMode}
-        className={`px-3 py-1 rounded-md border border-slate-600 text-slate-300 hover:text-white hover:border-slate-400 transition-colors bg-transparent cursor-pointer text-sm flex items-center ${isMobile && 'mb-3'}`}
+        onClick={toggleLightMode}
+        className={`px-3 py-1 rounded-md border border-[var(--color-border)] text-[var(--color-body)] hover:text-[var(--color-menu)] transition-colors bg-transparent cursor-pointer text-sm flex items-center ${isMobile && 'mb-3'}`}
         aria-label="Växla mörkt läge"
       >
-        {isDark ? '☀️ Ljust läge' : '🌙 Mörkt läge'}
+        {isLight ? '🌙 Mörkt läge' : '☀️ Ljust läge'}
       </button>
       <ul className={ulClassName}>
         {headerNavData.map((item) => (
@@ -61,7 +64,7 @@ function HeaderNav({ navClassName, ulClassName, onItemClick, isMobile }: HeaderN
                 scrollToElement(item.target);
                 if (onItemClick) onItemClick();
               }} 
-              className="text-slate-400 hover:text-slate-200 no-underline  transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              className="text-[var(--color-subheading)] hover:text-[var(--color-body)] no-underline  transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
             >
               {item.label}
             </button>

@@ -5,7 +5,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="py-4 px-6 md:py-6 md:px-12 border-b border-slate-800">
+    <header className="py-4 px-6 md:py-6 md:px-12 border-b border-[var(--color-border)]">
       <div className="flex justify-between items-center">
         <a 
           href="/" 
@@ -21,9 +21,9 @@ function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Öppna meny"
         >
-          <span className={`block w-6 h-0.5 bg-slate-100 transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-slate-100 transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-slate-100 transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-[var(--color-body)] transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-[var(--color-body)] transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-[var(--color-body)] transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
 
         {/* Desktopmeny */}

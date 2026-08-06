@@ -23,7 +23,7 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
       <div
         ref={modalRef}
         tabIndex={-1}
-        className="bg-slate-800 relative w-full max-w-lg rounded-lg p-6 shadow-xl"
+        className="bg-[var(--color-root-bg)] text-[var(--color-body)] w-full max-w-lg rounded-lg p-6 shadow-xl border-[var(--color-border)]"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         onKeyDown={(e) => {
@@ -31,14 +31,14 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
         }}
         aria-label="Kursinfo"
       >
-        <div className="flex items-center justify-between border-b border-slate-700 pb-3">
+        <div className="flex items-center justify-between border-b border-[var(--color-border)] pb-3">
           <div>
             <CourseCategory category={category} />
             <h2 className="text-xl font-bold mt-2">{title}</h2>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="self-start text-gray-400 hover:text-gray-600 font-bold text-xl px-2 cursor-pointer"
+            className="self-start text-[var(--color-menu)] hover:text-[var(--color-body)] font-bold text-xl px-2 cursor-pointer"
             aria-label="Stäng"
           >
             ✕
@@ -49,9 +49,8 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
           {description}
         </div>
 
-        <div className="flex justify-end pt-3 border-t border-slate-800">
+        <div className="flex justify-end pt-3 border-t border-[var(--color-border)]">
           <PrimaryButton
-            dark={true}
             text={"Stäng"}
             onClick={() => setIsOpen(false)}
           />
