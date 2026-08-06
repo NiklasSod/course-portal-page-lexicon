@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import PrimaryButton from "./PrimaryButton";
 import CourseCategory from "./CourseCategory";
 
@@ -9,6 +10,10 @@ interface CardModalProps {
 }
 
 function CardModal({title, category, description, setIsOpen}: CardModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    modalRef.current?.focus();
+  }, []);
 
   return (
     <div
@@ -16,9 +21,14 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
       onClick={() => setIsOpen(false)}
     >
       <div
+        ref={modalRef}
+        tabIndex={-1}
         className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
+        onKeyDown={(e) => {
+          if (e.key === "Escape") setIsOpen(false);
+        }}
         aria-label="Kursinfo"
       >
         <div className="flex items-center justify-between border-b pb-3">
