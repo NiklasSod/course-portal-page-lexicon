@@ -11,12 +11,19 @@ interface HeaderNavProps {
   navClassName: string;
   ulClassName: string;
   onItemClick?: () => void;
+  isMobile?: boolean;
 }
 
-function HeaderNav({ navClassName, ulClassName, onItemClick }: HeaderNavProps) {
+function HeaderNav({ navClassName, ulClassName, onItemClick, isMobile }: HeaderNavProps) {
   const [headerNavData, setHeaderNavData] = useState<NavItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isDark, setIsDark] = useState(true);
+
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle('dark', isDark);
+  };
 
   useEffect(() => {
     axios.get<NavItem[]>('/data/headerNavigation.json')
@@ -39,6 +46,13 @@ function HeaderNav({ navClassName, ulClassName, onItemClick }: HeaderNavProps) {
 
   return (
     <nav className={navClassName}>
+      <button
+        onClick={toggleDarkMode}
+        className={`px-3 py-1 rounded-md border border-slate-600 text-slate-300 hover:text-white hover:border-slate-400 transition-colors bg-transparent cursor-pointer text-sm flex items-center ${isMobile && 'mb-3'}`}
+        aria-label="Växla mörkt läge"
+      >
+        {isDark ? '☀️ Ljust läge' : '🌙 Mörkt läge'}
+      </button>
       <ul className={ulClassName}>
         {headerNavData.map((item) => (
           <li key={item.target}>

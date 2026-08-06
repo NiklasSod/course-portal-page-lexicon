@@ -27,7 +27,7 @@ function Header() {
         </button>
 
         {/* Desktopmeny */}
-        <HeaderNav navClassName="hidden md:flex" ulClassName="flex gap-8 list-none m-0 p-0" />
+        <HeaderNav navClassName="hidden md:flex items-center gap-4" ulClassName="flex gap-8 list-none m-0 p-0" />
       </div>
 
       {/* Mobilmeny */}
@@ -36,6 +36,7 @@ function Header() {
         navClassName="md:hidden pt-4 pb-2" 
         ulClassName="flex flex-col gap-4 list-none m-0 p-0" 
         onItemClick={() => setMenuOpen(false)} 
+        isMobile={true}
       />
       )}
     </header>
