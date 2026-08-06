@@ -58,7 +58,6 @@ The project source code lives in the `src/` directory, while static files and da
  ├── index.html             # Main HTML application entry point
  ├── package-lock.json
  ├── package.json           # Project package configuration and dependencies
- ├── pnpm-lock.yaml
  ├── README.md              # Current project documentation file
  ├── tsconfig.json          # TypeScript configuration
  └── vite.config.ts         # Vite automation server configuration
