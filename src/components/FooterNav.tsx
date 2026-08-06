@@ -12,7 +12,7 @@ function FooterNav() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    axios.get('/data/footerNavigation.json')
+    axios.get<FooterNavItem[]>('/data/footerNavigation.json')
       .then((response) => {
         setFooterNavData(response.data);
         setLoading(false);

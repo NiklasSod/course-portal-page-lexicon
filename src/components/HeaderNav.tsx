@@ -19,7 +19,7 @@ function HeaderNav({ navClassName, ulClassName, onItemClick }: HeaderNavProps) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    axios.get('/data/headerNavigation.json')
+    axios.get<NavItem[]>('/data/headerNavigation.json')
       .then((response) => {
         setHeaderNavData(response.data);
         setLoading(false);
