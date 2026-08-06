@@ -16,6 +16,7 @@ interface HeaderNavProps {
 function HeaderNav({ navClassName, ulClassName, onItemClick }: HeaderNavProps) {
   const [headerNavData, setHeaderNavData] = useState<NavItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     axios.get('/data/headerNavigation.json')
@@ -26,10 +27,15 @@ function HeaderNav({ navClassName, ulClassName, onItemClick }: HeaderNavProps) {
       .catch((error) => {
         console.error('Error loading navigation data:', error);
         setLoading(false);
+        setError('Error loading navigation data:');
       });
   }, []);
 
   if (loading) return null;
+
+  if (error || !Array.isArray(headerNavData)) {
+    return <p className="text-red-500 text-sm">{error || 'Ogiltig datastruktur.'}</p>;
+   }
 
   return (
     <nav className={navClassName}>
