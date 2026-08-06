@@ -14,7 +14,7 @@ function CourseCard({title, category, description}: CourseCardProps) {
 
   return (
     <>
-      <article className="bg-white border border-gray-200 rounded-md p-6 shadow-sm flex flex-col justify-between h-full">
+      <article className="bg-slate-800 border border-slate-700 rounded-md p-6 shadow-sm flex flex-col justify-between h-full">
         <CourseCategory category={category} />
         <h3 className="text-[20px] font-bold mb-3">{title}</h3>
         <PrimaryButton

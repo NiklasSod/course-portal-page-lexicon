@@ -64,7 +64,7 @@ function CourseCards() {
           </header>
       ) : (
         <>
-          <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <header className="flex flex-row items-center justify-between gap-4 mb-6">
             <h2 className="text-[28px] font-bold">Populära kurser</h2>
             <label htmlFor="category-filter" className="flex items-center gap-2 text-sm font-medium text-gray-900">
             <label htmlFor="category-filter" className="flex items-center gap-2 text-sm font-medium text-gray-900"></label>
@@ -74,7 +74,6 @@ function CourseCards() {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 aria-controls="course-grid"
-                className="bg-white border border-gray-400 rounded-md px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-black cursor-pointer"
               >
                 {categories.map((category) => (
                   <option key={category} value={category}>
