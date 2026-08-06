@@ -1,5 +1,11 @@
-import headerNavData from '../../public/data/headerNavigation.json';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { scrollToElement } from '../utils/scroll';
+
+interface NavItem {
+  target: string;
+  label: string;
+}
 
 interface HeaderNavProps {
   navClassName: string;
@@ -8,6 +14,23 @@ interface HeaderNavProps {
 }
 
 function HeaderNav({ navClassName, ulClassName, onItemClick }: HeaderNavProps) {
+  const [headerNavData, setHeaderNavData] = useState<NavItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get('/data/headerNavigation.json')
+      .then((response) => {
+        setHeaderNavData(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error loading navigation data:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return null;
+
   return (
     <nav className={navClassName}>
       <ul className={ulClassName}>
