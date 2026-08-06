@@ -11,7 +11,7 @@ function PrimaryButton({
 }) {
   const sizeStyle = size === "medium" ? "text-[15px]" : "text-[13px]";
   const variantStyles = dark
-    ? "bg-slate-950 text-slate-100 hover:bg-slate-900 border border-slate-950"
+    ? "bg-slate-950 text-slate-100 hover:bg-slate-800 border border-slate-950"
     : "bg-slate-800 text-slate-100 hover:bg-slate-700 border border-slate-700";
   return (
     <button

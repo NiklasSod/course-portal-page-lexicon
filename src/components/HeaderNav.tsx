@@ -47,7 +47,7 @@ function HeaderNav({ navClassName, ulClassName, onItemClick }: HeaderNavProps) {
                 scrollToElement(item.target);
                 if (onItemClick) onItemClick();
               }} 
-              className="text-slate-400 no-underline hover:text-slate-200 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+              className="text-slate-400 hover:text-slate-200 no-underline  transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
             >
               {item.label}
             </button>

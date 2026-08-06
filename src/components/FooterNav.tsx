@@ -35,7 +35,7 @@ function FooterNav() {
         <ul className="flex gap-8 list-none m-0 p-0">
         {footerNavData.map((item) => (
             <li key={item.href}>
-            <a href={item.href} className="text-sm text-footer-text hover:text-stone-500 no-underline transition-colors leading-none">
+            <a href={item.href} className="text-slate-400 hover:text-slate-200 text-sm no-underline transition-colors leading-none">
               {item.label}
             </a>
             </li>
