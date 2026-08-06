@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import PrimaryButton from './PrimaryButton'
 
 interface FormModalProps {
@@ -8,15 +9,25 @@ interface FormModalProps {
 }
 
 export function FormModal({ name, email, message, setIsOpen }: FormModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    modalRef.current?.focus();
+  }, []);
+
   return (
     <div
-  className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-  onClick={() => setIsOpen(false)}
->
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      onClick={() => setIsOpen(false)}
+    >
   <div
     className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl"
+    ref={modalRef}
+    tabIndex={-1}
     onClick={(e) => e.stopPropagation()}
     role="dialog"
+    onKeyDown={(e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    }}
   >
     <div className="flex items-start justify-between border-b pb-4 mb-4">
       <div>
