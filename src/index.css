@@ -34,5 +34,10 @@
     body {
         margin: 0;
         padding: 0;
+        @apply bg-slate-950 text-slate-100 shadow-none sm:p-[10px] sm:shadow-[var(--shadow-custom)] md:p-5 lg:p-10;
+    }
+
+    #root {
+        @apply bg-slate-900 max-w-[1200px] w-full mx-auto shadow-[0_4px_20px_0px_rgba(0,0,0,0.08)] md:rounded-lg overflow-hidden flex flex-col min-h-screen md:min-h-0;
     }
 }

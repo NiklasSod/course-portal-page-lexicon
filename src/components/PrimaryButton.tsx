@@ -11,12 +11,12 @@ function PrimaryButton({
 }) {
   const sizeStyle = size === "medium" ? "text-[15px]" : "text-[13px]";
   const variantStyles = dark
-    ? "bg-btn-dark text-white focus:outline-none focus:ring-2 focus:ring-teal-300"
-    : "bg-[#FFF] text-btn-dark";
+    ? "bg-slate-950 text-slate-100 hover:bg-slate-900 border border-slate-950"
+    : "bg-slate-800 text-slate-100 hover:bg-slate-700 border border-slate-700";
   return (
     <button
       onClick={onClick}
-      className={`${variantStyles} border border-btn-dark rounded-md py-[0.7em] px-[1.4em] w-max font-bold leading-none cursor-pointer ${sizeStyle}`}
+      className={`${variantStyles} font-medium transition rounded-md py-[0.7em] px-[1.4em] w-max font-bold leading-none cursor-pointer ${sizeStyle}`}
     >
       {text}
     </button>
