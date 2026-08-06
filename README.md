@@ -107,4 +107,4 @@ npm run preview
 * **Class:** Lexicon LTU VT-2026
 * **Course:** Frontend
 
-**Tags:** react, typescript, tailwind, vite, accessibility, wcag
+**Tags:** `react`, `typescript`, `tailwind`, `vite`, `accessibility`, `wcag`
