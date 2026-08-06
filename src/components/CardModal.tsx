@@ -23,7 +23,7 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
       <div
         ref={modalRef}
         tabIndex={-1}
-        className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl"
+        className="bg-slate-800 relative w-full max-w-lg rounded-lg p-6 shadow-xl"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         onKeyDown={(e) => {
@@ -31,27 +31,27 @@ function CardModal({title, category, description, setIsOpen}: CardModalProps) {
         }}
         aria-label="Kursinfo"
       >
-        <div className="flex items-center justify-between border-b pb-3">
+        <div className="flex items-center justify-between border-b border-slate-700 pb-3">
           <div>
             <CourseCategory category={category} />
-            <h2 className="text-xl font-bold text-gray-900 mt-2">{title}</h2>
+            <h2 className="text-xl font-bold mt-2">{title}</h2>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="text-gray-400 hover:text-gray-600 font-bold text-xl px-2"
+            className="self-start text-gray-400 hover:text-gray-600 font-bold text-xl px-2 cursor-pointer"
             aria-label="Stäng"
           >
             ✕
           </button>
         </div>
 
-        <div className="py-4 text-gray-600 leading-relaxed">
+        <div className="py-4 leading-relaxed">
           {description}
         </div>
 
-        <div className="flex justify-end pt-3 border-t">
+        <div className="flex justify-end pt-3 border-t border-slate-800">
           <PrimaryButton
-            dark={false}
+            dark={true}
             text={"Stäng"}
             onClick={() => setIsOpen(false)}
           />
