@@ -105,6 +105,7 @@ npm run preview
 ## Course Information
 * **Provider:** Lexicon IT-proffs AB / Luleå Tekniska Universitet (LTU)
 * **Class:** Lexicon LTU VT-2026
-* **Course:** Frontend
+* **Track:** Frontend / Backend
+* **Courses:** HTML/CSS, JavaScript/TypeScript, Bootstrap, Tailwind, API, Accessibility
 
-**Tags:** `react`, `typescript`, `tailwind`, `vite`, `accessibility`, `wcag`
+**Tags:** `react`, `vite`, `accessibility`, `wcag`, `flexbox`, `grid`, `seo`, `bootstrap`, `semantik`, `tailwind`, `javascript`, `typescript`, `fetch`, `async-await`, `minimal-api`
