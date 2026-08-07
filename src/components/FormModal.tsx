@@ -20,7 +20,7 @@ export function FormModal({ name, email, message, setIsOpen }: FormModalProps) {
       onClick={() => setIsOpen(false)}
     >
   <div
-    className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl"
+    className="bg-slate-800 relative w-full max-w-lg rounded-lg p-6 shadow-xl"
     ref={modalRef}
     tabIndex={-1}
     onClick={(e) => e.stopPropagation()}
@@ -29,9 +29,9 @@ export function FormModal({ name, email, message, setIsOpen }: FormModalProps) {
       if (e.key === "Escape") setIsOpen(false);
     }}
   >
-    <div className="flex items-start justify-between border-b pb-4 mb-4">
+    <div className="flex items-start justify-between border-b border-slate-700 pb-4 mb-4">
       <div>
-        <h2 className="text-xl font-bold text-gray-900">
+        <h2 className="text-xl font-bold">
           Tack! Vi har fått in ditt meddelande.
         </h2>
       </div>
@@ -66,7 +66,7 @@ export function FormModal({ name, email, message, setIsOpen }: FormModalProps) {
 
     <div className="flex justify-end pt-4 mt-2">
       <PrimaryButton
-        dark={false}
+        dark={true}
         text={"Stäng"}
         onClick={() => setIsOpen(false)}
       />
