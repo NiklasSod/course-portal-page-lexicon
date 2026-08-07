@@ -106,6 +106,6 @@ npm run preview
 * **Provider:** Lexicon IT-proffs AB / Luleå Tekniska Universitet (LTU)
 * **Class:** Lexicon LTU VT-2026
 * **Track:** Frontend / Backend
-* **Courses:** HTML/CSS, JavaScript/TypeScript, Bootstrap, Tailwind, API, Accessibility
+* **Courses:** HTML/CSS, JavaScript/TypeScript, API
 
 **Tags:** `react`, `vite`, `accessibility`, `wcag`, `flexbox`, `grid`, `seo`, `semantik`, `tailwind`, `javascript`, `typescript`, `json`
