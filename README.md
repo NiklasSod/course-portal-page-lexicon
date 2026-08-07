@@ -108,4 +108,4 @@ npm run preview
 * **Track:** Frontend / Backend
 * **Courses:** HTML/CSS, JavaScript/TypeScript, Bootstrap, Tailwind, API, Accessibility
 
-**Tags:** `react`, `vite`, `accessibility`, `wcag`, `flexbox`, `grid`, `seo`, `bootstrap`, `semantik`, `tailwind`, `javascript`, `typescript`, `fetch`, `async-await`, `minimal-api`
+**Tags:** `react`, `vite`, `accessibility`, `wcag`, `flexbox`, `grid`, `seo`, `semantik`, `tailwind`, `javascript`, `typescript`, `json`
